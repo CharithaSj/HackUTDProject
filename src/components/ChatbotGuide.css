@@ -1,0 +1,156 @@
+.chatbot-guide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.guide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid rgba(139, 69, 19, 0.4);
+}
+
+.guide-header h3 {
+  color: #8B4513;
+  font-size: 1.4rem;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.2);
+}
+
+.guide-icon {
+  font-size: 1.8rem;
+  opacity: 0.7;
+}
+
+.guide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.guide-title {
+  color: #8B4513;
+  font-size: 1.2rem;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 400;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed rgba(139, 69, 19, 0.4);
+}
+
+.guide-steps {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+  min-height: 0;
+}
+
+.guide-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(245, 222, 179, 0.5);
+  border-radius: 8px;
+  border: 2px solid rgba(139, 69, 19, 0.3);
+  border-left: 4px solid #8B4513;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(139, 69, 19, 0.1);
+}
+
+.guide-step:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateX(3px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  font-family: 'Nunito', sans-serif;
+  box-shadow: 0 2px 4px rgba(139, 69, 19, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.step-text {
+  color: #8B4513;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: 'Nunito', sans-serif;
+  flex: 1;
+  font-weight: 500;
+}
+
+.guide-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.15) 0%, rgba(160, 82, 45, 0.1) 100%);
+  border-radius: 8px;
+  border: 2px solid rgba(139, 69, 19, 0.3);
+  margin-top: auto;
+  box-shadow: inset 0 2px 4px rgba(139, 69, 19, 0.1);
+}
+
+.tip-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.guide-tip p {
+  color: #8B4513;
+  font-size: 0.85rem;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.5;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
+
+.guide-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid rgba(139, 69, 19, 0.3);
+}
+
+.decorative-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(139, 69, 19, 0.4), transparent);
+}
+
+.guide-footer span {
+  color: #8B4513;
+  font-size: 0.8rem;
+  font-style: italic;
+  font-family: 'Nunito', sans-serif;
+  white-space: nowrap;
+  font-weight: 600;
+}
+

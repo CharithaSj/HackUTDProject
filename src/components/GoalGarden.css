@@ -1,0 +1,318 @@
+.goal-garden {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  padding: 20px;
+  background: linear-gradient(to top, #fce7f3 0%, #f9d7e3 100%);
+  border-radius: 12px;
+  min-height: 350px;
+  border: 3px solid #f9a8d4;
+  box-shadow: 
+    inset 0 2px 8px rgba(249, 168, 212, 0.2),
+    0 4px 12px rgba(236, 153, 185, 0.3);
+  z-index: 10; /* Ensure no text appears behind */
+}
+
+.garden-header {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.garden-header h4 {
+  color: #d87ca3;
+  font-size: 1.2rem;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(236, 153, 185, 0.3);
+}
+
+.growth-indicator {
+  background: rgba(249, 168, 212, 0.3);
+  padding: 6px 14px;
+  border-radius: 12px;
+  border: 2px solid #f9a8d4;
+  box-shadow: inset 0 2px 4px rgba(249, 168, 212, 0.2);
+}
+
+.growth-value {
+  color: #d87ca3;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+}
+
+.garden-pot {
+  position: relative;
+  width: 90px;
+  height: 65px;
+  z-index: 2;
+  margin-bottom: -10px;
+}
+
+.pot-top {
+  width: 100px;
+  height: 15px;
+  background: linear-gradient(to bottom, #6d5637 0%, #5a4a2f 100%);
+  border-radius: 50% 50% 0 0;
+  margin-left: -5px;
+  box-shadow: 
+    0 -3px 6px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  border: 2px solid #5a4a2f;
+}
+
+.pot-body {
+  width: 90px;
+  height: 60px;
+  background: linear-gradient(to right, #5a4a2f 0%, #6d5637 30%, #8b6f47 50%, #6d5637 70%, #5a4a2f 100%);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 
+    inset -4px 0 8px rgba(0, 0, 0, 0.4),
+    inset 4px 0 8px rgba(255, 255, 255, 0.1),
+    0 4px 10px rgba(0, 0, 0, 0.3);
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid #5a4a2f;
+}
+
+.plant-container {
+  position: absolute;
+  bottom: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  max-height: 200px;
+}
+
+/* Sprout Stage */
+.sprout-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.sprout-stem {
+  width: 4px;
+  height: 30px;
+  background: linear-gradient(to right, #2d5016 0%, #3d6b1f 50%, #2d5016 100%);
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 3px rgba(45, 80, 22, 0.4);
+}
+
+.sprout-leaf {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #2d5016;
+  border-radius: 0 100% 0 100%;
+  z-index: 2;
+}
+
+.sprout-leaf.leaf-1 {
+  left: 50%;
+  top: 5px;
+  transform: translateX(-50%) rotate(-30deg);
+}
+
+.sprout-leaf.leaf-2 {
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%) rotate(30deg);
+}
+
+/* Plant Stage */
+.plant-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.plant-stem {
+  width: 7px;
+  background: linear-gradient(to right, #2d5016 0%, #3d6b1f 50%, #2d5016 100%);
+  border-radius: 3px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 4px rgba(45, 80, 22, 0.4);
+  min-height: 40px;
+}
+
+.plant-leaf {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #2d5016;
+  border-radius: 0 100% 0 100%;
+  z-index: 2;
+  animation: leafSway 4s ease-in-out infinite;
+}
+
+.plant-leaf-1 {
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%) rotate(-45deg);
+  background: #2d5016;
+}
+
+.plant-leaf-2 {
+  right: 35%;
+  top: 25%;
+  transform: rotate(45deg);
+  background: #3d6b1f;
+}
+
+.plant-leaf-3 {
+  left: 35%;
+  top: 35%;
+  transform: rotate(-30deg);
+  background: #2d5016;
+}
+
+.plant-leaf-4 {
+  right: 30%;
+  top: 50%;
+  transform: rotate(60deg);
+  background: #4a7c26;
+}
+
+.plant-leaf-5 {
+  left: 40%;
+  top: 60%;
+  transform: rotate(-60deg);
+  background: #3d6b1f;
+}
+
+.plant-leaf-6 {
+  right: 40%;
+  top: 45%;
+  transform: rotate(30deg);
+  background: #2d5016;
+}
+
+/* Flowering Stage */
+.flowering-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.flower {
+  position: absolute;
+  z-index: 3;
+}
+
+.flower-1 {
+  top: 20%;
+  right: 25%;
+}
+
+.flower-2 {
+  top: 35%;
+  left: 25%;
+}
+
+.flower-petal {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+  border-radius: 50% 50% 50% 0;
+  border: 1px solid rgba(255, 20, 147, 0.5);
+}
+
+.flower-petal.petal-1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.flower-petal.petal-2 {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.flower-petal.petal-3 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.flower-petal.petal-4 {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(270deg);
+}
+
+.flower-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #ffd700;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(255, 215, 0, 0.6);
+  border: 1px solid #ffa500;
+}
+
+.growth-sparkle {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  font-size: 1.8rem;
+  z-index: 4;
+}
+
+.garden-message {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #d87ca3;
+  font-size: 0.9rem;
+  font-family: 'Nunito', sans-serif;
+  font-style: italic;
+  text-align: center;
+  width: 90%;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+/* Animations */
+@keyframes leafSway {
+  0%, 100% { 
+    transform: rotate(var(--rotation, 0deg)) translateX(0);
+  }
+  50% { 
+    transform: rotate(calc(var(--rotation, 0deg) + 5deg)) translateX(2px);
+  }
+}
+
+.plant-leaf-1 { --rotation: -45deg; }
+.plant-leaf-2 { --rotation: 45deg; }
+.plant-leaf-3 { --rotation: -30deg; }
+.plant-leaf-4 { --rotation: 60deg; }
+.plant-leaf-5 { --rotation: -60deg; }
+.plant-leaf-6 { --rotation: 30deg; }
