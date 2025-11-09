@@ -5,31 +5,39 @@
 }
 
 body {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  background: linear-gradient(135deg, #f5f1e8 0%, #e8ddd4 100%);
+  font-family: 'Nunito', 'Georgia', 'Times New Roman', sans-serif;
+  background: #F7DCC5; /* Warm peachy beige */
   min-height: 100vh;
-  color: #3d3d3d;
+  max-height: 100vh;
+  overflow: hidden;
+  color: #8b4a6b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #root {
   min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
-/* Scrollbar styling */
+/* Scrollbar styling - vintage theme */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: rgba(247, 220, 197, 0.5);
+  border-left: 1px solid rgba(139, 69, 19, 0.3);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
+  background: linear-gradient(to bottom, #8B4513 0%, #A0522D 100%);
+  border-radius: 6px;
+  border: 2px solid rgba(247, 220, 197, 0.5);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: linear-gradient(to bottom, #A0522D 0%, #8B4513 100%);
 }
 

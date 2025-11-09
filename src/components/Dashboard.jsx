@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import DashboardDropdown from './DashboardDropdown'
 import './Dashboard.css'
 
 function Dashboard() {
@@ -6,13 +7,9 @@ function Dashboard() {
 
   return (
     <div className="dashboard-container">
+      <DashboardDropdown />
       <header className="dashboard-header">
         <h1>My Dashboard</h1>
-        <div className="user-info">
-          <button onClick={() => navigate('/')} className="home-button">
-            Home
-          </button>
-        </div>
       </header>
 
       <main className="dashboard-main">
