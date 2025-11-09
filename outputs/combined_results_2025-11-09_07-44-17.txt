@@ -1,8 +1,0 @@
-USER QUERY: Dshah1003
-
-SOURCE SUMMARY:
-  ✓ GitHub data analyzed.
-
-
-=== GITHUB ===
-⚠️ Could not find a valid GitHub repo link in your query.
