@@ -1,0 +1,16 @@
+# 🔒 Environment files
+.env
+.env.*
+
+# 🔐 Credentials / Service Keys
+*.json
+credentials/
+**/credentials/
+*service-key.json
+
+# 🧠 Python / virtualenv
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
